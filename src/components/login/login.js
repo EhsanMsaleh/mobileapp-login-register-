@@ -1,8 +1,10 @@
 import { async } from "@firebase/util";
 import { collection, doc, getDocs } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
-import { db } from "../../../core/config";
+import { db , auth } from "../../../core/config";
 import { Text, TextInput } from "react-native";
+
+import { getAuth , createUserWithEmailAndPassword , signInWithEmailAndPassword } from "firebase/auth";
 import {
   Center,
   ScrollView,
@@ -21,6 +23,24 @@ const Login = () => {
 const [email,setemail]=useState('');
 const [password,setpassword]=useState('');
 
+
+function Login()
+{ console.log(email,password)
+  signInWithEmailAndPassword(auth,email,password)
+  .then((e)=>{
+    const user = e.user
+    console.log(user)
+    alert("cool")
+    setemail("");
+  setpassword("");
+  })
+  .catch(err=>{
+    console.log(err)
+    alert("nooo")
+  })
+  
+}
+
   return (
     <KeyboardAvoidingView
       style={styles.container}
@@ -32,6 +52,7 @@ const [password,setpassword]=useState('');
         onChangeText={(text) => {setemail(text)}} value={email}
          placeholder="Email" />
         <TextInput style={styles.input} 
+        
           onChangeText={(text) => {setpassword(text)}}
           value={password}
           placeholder="Password"
@@ -40,7 +61,7 @@ const [password,setpassword]=useState('');
 
         <View style={styles.buttonContainer}>
           <Button style={styles.button}
-          onPress={()=>{}}
+          onPress={()=>{Login()}}
           >
             <Text style={styles.buttonText}>LOGIN</Text>
           </Button>
@@ -49,11 +70,11 @@ const [password,setpassword]=useState('');
           >
              <Text style={styles.buttonOutLineText}>REGISTER</Text>
           </Button>
-          <Button style={styles.buttonfo}
+          {/* <Button style={styles.buttonfo}
           onPress={()=>{}}
           >
              <Text style={styles.buttonOutLineText}>Facebook</Text>
-          </Button>
+          </Button> */}
         </View>
       </View>
     </KeyboardAvoidingView>

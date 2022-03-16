@@ -1321,6 +1321,18 @@
   "resolved" "https://registry.npmjs.org/@firebase/auth-types/-/auth-types-0.11.0.tgz"
   "version" "0.11.0"
 
+"@firebase/auth@^0.19.9":
+  "integrity" "sha512-NoB/bCBVFBbJg23C+NqUP29KGaFOZEuLRA4ZKIKYgEfqsNfxMcEW8V+BMaU6n26JecUwNSBi7nPpOh+pWYOsaA=="
+  "resolved" "https://registry.npmjs.org/@firebase/auth/-/auth-0.19.9.tgz"
+  "version" "0.19.9"
+  dependencies:
+    "@firebase/component" "0.5.10"
+    "@firebase/logger" "0.3.2"
+    "@firebase/util" "1.4.3"
+    "node-fetch" "2.6.7"
+    "selenium-webdriver" "4.0.0-rc-1"
+    "tslib" "^2.1.0"
+
 "@firebase/auth@0.19.3":
   "integrity" "sha512-asOJkmzBh38DgZ5fBt7cv8dNyU3r7kRVoXi9f1eCpQp/n+NagaiUM+YKXq0snjbchFJu7qPBiwrIg/xZinY4kg=="
   "resolved" "https://registry.npmjs.org/@firebase/auth/-/auth-0.19.3.tgz"
@@ -1331,6 +1343,14 @@
     "@firebase/util" "1.4.2"
     "node-fetch" "2.6.5"
     "selenium-webdriver" "4.0.0-rc-1"
+    "tslib" "^2.1.0"
+
+"@firebase/component@0.5.10":
+  "integrity" "sha512-mzUpg6rsBbdQJvAdu1rNWabU3O7qdd+B+/ubE1b+pTbBKfw5ySRpRRE6sKcZ/oQuwLh0HHB6FRJHcylmI7jDzA=="
+  "resolved" "https://registry.npmjs.org/@firebase/component/-/component-0.5.10.tgz"
+  "version" "0.5.10"
+  dependencies:
+    "@firebase/util" "1.4.3"
     "tslib" "^2.1.0"
 
 "@firebase/component@0.5.9":
@@ -1571,6 +1591,13 @@
   "integrity" "sha512-JMiUo+9QE9lMBvEtBjqsOFdmJgObFvi7OL1A0uFGwTmlCI1ZeNPOEBrwXkgTOelVCdiMO15mAebtEyxFuQ6FsA=="
   "resolved" "https://registry.npmjs.org/@firebase/util/-/util-1.4.2.tgz"
   "version" "1.4.2"
+  dependencies:
+    "tslib" "^2.1.0"
+
+"@firebase/util@1.4.3":
+  "integrity" "sha512-gQJl6r0a+MElLQEyU8Dx0kkC2coPj67f/zKZrGR7z7WpLgVanhaCUqEsptwpwoxi9RMFIaebleG+C9xxoARq+Q=="
+  "resolved" "https://registry.npmjs.org/@firebase/util/-/util-1.4.3.tgz"
+  "version" "1.4.3"
   dependencies:
     "tslib" "^2.1.0"
 
